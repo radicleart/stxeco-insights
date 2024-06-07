@@ -12,12 +12,11 @@
 	import type { SbtcConfig } from '$types/sbtc_config'
 	import { defaultSbtcConfig } from '$lib/sbtc';
 	import { COMMS_ERROR, tsToTime } from '$lib/utils.js'
-	import { fetchStacksInfo, getBalanceAtHeight, setAuthorisation } from '$lib/bridge_api';
+	import { fetchStacksInfo, getBalanceAtHeight, getPoxInfo, setAuthorisation } from '$lib/bridge_api';
 	import type { AddressObject } from 'sbtc-bridge-lib';
 	import { connectToStacks, stacksStore, subscribeBlockUpdates } from '$stores/stacksStore';
 	import { getDaoProposals, getPoolAndSoloAddresses } from '$lib/dao_api';
 	import { getCurrentProposal } from '$lib/sbtc_admin';
-	import { getPoxInfo } from '$lib/pox_api';
 	import { aggregateDelegationData } from '$lib/pox4_api';
 
 	const unsubscribe1 = sbtcConfig.subscribe(() => {});
@@ -81,12 +80,12 @@
 			return conf;
 		});
 		
-		inited = true;
 		let aggDelegationData:Array<any> = await aggregateDelegationData()
 	  	stacksStore.update(conf => {
 			conf.aggDelegationData = aggDelegationData
 			return conf
 	  	})
+		inited = true;
 
 		await initApplication(($sbtcConfig) ? $sbtcConfig : defaultSbtcConfig as SbtcConfig, undefined);
 		if (loggedIn() && !$sbtcConfig.authHeader) {
@@ -147,6 +146,7 @@
 		}
 	})
 </script>
+
 	<div class="bg-white min-h-screen relative">
 		{#if inited}
 		<Header on:login_event={loginEvent} on:network_switch_event={networkSwitchEvent}/>

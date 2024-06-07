@@ -10,11 +10,10 @@
 	import EventHeader from './EventHeader.svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import type { PoolStackerEvent } from '$types/stxeco.type';
-	import { aggregateDelegationData, findPoolStackerEvents, findPoolStackerEventsByEvent, findPoolStackerEventsByStacker } from '$lib/pox4_api';
+	import { findPoolStackerEvents, findPoolStackerEventsByEvent, findPoolStackerEventsByStacker } from '$lib/pox4_api';
 	import DaoUtils from '$lib/service/DaoUtils';
 	import { ArrowsUpDown, AdjustmentsHorizontal, Icon, MagnifyingGlassCircle } from 'svelte-hero-icons';
 	import EventFilters from './EventFilters.svelte';
-	import DaoResults from '$lib/components/all-voters/dao-voting/DaoResults.svelte';
 
   
   export let mode:string;

@@ -72,6 +72,14 @@ export async function fetchStacksInfo() {
     return undefined;
   }
 }
+export async function getPoxInfo() {
+  const path = addNetSelector(CONFIG.VITE_STACKS_API + '/v2/pox');
+  const response = await fetch(path);
+  const res = await extractResponse(response);
+  return res;
+}
+
+
 export async function getBalanceAtHeight(stxAddress:string, height: number):Promise<any> {
   if (!stxAddress) return {
     stx: {

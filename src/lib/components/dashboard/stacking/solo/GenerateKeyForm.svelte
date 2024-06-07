@@ -7,7 +7,7 @@
 	import { signPox4SignatureHash, Pox4SignatureTopic } from '@stacks/stacking';
 	import StackStxForm from './StackStxForm.svelte';
 	import { verifySignerKeySig } from '$lib/signers_api';
-	import Banner from '$lib/components/shared/Banner.svelte';
+	import Banner from '$lib/ui/Banner.svelte';
 	import { updated } from '$app/stores';
 	import type { VerifySignerKey } from '$types/signer_types';
 

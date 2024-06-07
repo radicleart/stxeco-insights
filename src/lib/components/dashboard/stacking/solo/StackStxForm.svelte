@@ -8,7 +8,7 @@
 	import { getStacksNetwork } from '$lib/stacks_connect';
 	import { hex } from '@scure/base';
 	import { explorerTxUrl, getHashBytesFromAddress } from '$lib/utils';
-	import Banner from '$lib/components/shared/Banner.svelte';
+	import Banner from '$lib/ui/Banner.svelte';
 
 	const stackStxParams = $sbtcConfig.signerSignature;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import ArrowUpRight from '$lib/components/shared/ArrowUpRight.svelte';
+	import ArrowUpRight from '$lib/ui/ArrowUpRight.svelte';
 	import { explorerAddressUrl, fmtNumber, fmtNumberStacksFloor, getAddressFromHashBytes, truncate } from '$lib/utils';
 	import type { PoolStackerEvent } from '$types/pox_types';
 	import { onMount } from 'svelte';

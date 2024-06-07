@@ -116,20 +116,11 @@
 			<div class="flex">
 				<NavLi nonActiveClass={getNavActiveClass('/results')}><a href={'https://stx.eco/dao/proposals/' + $sbtcConfig.currentProposal.contractId + '/results?method=1'}>Results</a></NavLi>
 				<NavLi nonActiveClass={getNavActiveClass('/insights')}><a href={'/insights'}>Insights</a></NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/insights')}><a href={'https://stx.eco/sip'}>SIP Process</a></NavLi>
+				<NavLi nonActiveClass={getNavActiveClass('/sip')}><a href="https://stx.eco/sip">SIP Process</a></NavLi>
 				{#if $page.url.hostname.indexOf('do not display these links right now!') > -1}
 				<NavLi nonActiveClass={getNavActiveClass('/dashboard/stacking')}><a href={'/dashboard/stacking'}>Stackers</a></NavLi>
 				<NavLi nonActiveClass={getNavActiveClass('/dashboard/address-lookup')}><a href={'/dashboard/address-lookup'}>Address lookup</a></NavLi>
 				{/if}
-				<!--
-				<NavLi nonActiveClass={getNavActiveClass('/badge')}><a href={'/dao/proposals/' + $sbtcConfig.currentProposal.contractId + '/badge?method=1'}>Claim badge</a></NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/dashboard/address-lookup')}><a href={'/dashboard/address-lookup/' + $sbtcConfig.keySets[CONFIG.VITE_NETWORK].stxAddress}>Stacking Info</a></NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/dao/proposals')} href="/dao/proposals">Proposals</NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/dao/proposals/propose')} href="/dao/proposals/propose">Propose</NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/faq')} href="/faq">FAQ</NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/dao/proposals')} href={'/dao/proposals/' + $sbtcConfig.currentProposal.contractId + '?method=1'}>Vote</NavLi>
-				<NavLi nonActiveClass={getNavActiveClass('/dao/proposals') + ' bg-gray-100 opacity-80  ' }><a class="opacity-100 text-gray-900" href="/"  on:click|preventDefault={() => switchNetwork()}> {CONFIG.VITE_NETWORK}</a></NavLi>
-				-->
 			</div>
 			</NavUl>
 			<NavUl

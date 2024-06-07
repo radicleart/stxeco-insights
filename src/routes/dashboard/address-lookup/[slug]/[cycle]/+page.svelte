@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import StackerDashboard from '$lib/components/all-voters/analysis/StackerDashboard.svelte';
+	import StackerDashboard from '$lib/components/analysis/StackerDashboard.svelte';
 
 	let address:string;
 	let cycle:number;
