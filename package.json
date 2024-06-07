@@ -77,7 +77,7 @@
 		"sbtc-bridge-lib": "^1.1.27",
 		"sockjs": "^0.3.24",
 		"svelte-json-tree": "^2.2.0",
-		"svelte-local-storage-store": "^0.5.0",
+		"svelte-local-storage-store": "^0.6.4",
 		"svelte-notifications": "^0.9.98",
 		"svelte-qrcode": "^1.0.0",
 		"svelte-range-slider-pips": "^2.2.3"
