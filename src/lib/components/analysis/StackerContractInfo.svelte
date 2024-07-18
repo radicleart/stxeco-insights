@@ -29,7 +29,7 @@
 {/if}
 {#if stackerInfo?.cycleInfo && showCycleInfo}
 	<p>
-		Cycle {stackerInfo.cycle} has {stackerInfo.cycleInfo?.numRewardSetPoxAddresses || 0} reward set addresses and
+		Cycle {stackerInfo.cycle} has {stackerInfo.cycleInfo?.numbEntriesRewardCyclePoxList || 0} reward set addresses and
 		a total of {fmtNumber(Math.floor(Number(fmtMicroToStx(stackerInfo.cycleInfo?.totalUstxStacked || 0))))} stx locked.
 	</p>
 {/if}
