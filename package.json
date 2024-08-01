@@ -31,7 +31,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.62.0",
 		"autoprefixer": "^10.4.16",
-		"eslint": "^8.46.0",
+		"eslint": "^9.8.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.33.2",
 		"flowbite-svelte": "^0.44.24",
